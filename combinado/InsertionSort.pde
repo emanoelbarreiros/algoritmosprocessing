@@ -2,8 +2,8 @@ class InsertionSort extends Algoritmo {
   
   int j = 1;
   
-  public InsertionSort(int[] valores){
-    super(valores);
+  public InsertionSort(int[] valores, combinado principal){
+    super(valores, principal);
   }
   
   public void passo() {
@@ -12,6 +12,7 @@ class InsertionSort extends Algoritmo {
     while (i >= 0 && valores[i] > chave) {
       valores[i+1] = valores[i];
       i = i - 1;
+      pintar(valores, 500);
     }
     valores[i+1] = chave;
     //controlando o laço

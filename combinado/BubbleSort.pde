@@ -1,7 +1,7 @@
 class BubbleSort extends Algoritmo{
   
-  public BubbleSort(int[] valores){
-    super(valores);
+  public BubbleSort(int[] valores, combinado principal){
+    super(valores, principal);
   }
   
   public void passo() {
@@ -10,6 +10,7 @@ class BubbleSort extends Algoritmo{
         int temp = valores[i-1];
         valores[i-1] = valores[i];
         valores[i] = temp;
+        pintar(valores, 0);
       }
     }
   }
